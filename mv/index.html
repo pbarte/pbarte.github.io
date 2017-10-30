@@ -142,16 +142,20 @@
         }
     </style>
     <script type="text/javascript">
-        var today, someday, text;
+        var today, someday, someday, text;
         today = new Date();
         someday = new Date();
+        sometime = new Date();
         someday.setFullYear(2017, 11, 01);
-        if (someday > today) {
-            $(".black-friday").css("display", "none");
-        } else {
+        sometime.setFullYear(2017, 11, 23);
+        if (today >= someday && today <= sometime) {
             $(".black-friday").css("display", "block");
+            console.log('block');
+        } else {
+            $(".black-friday").css("display", "none");
+            console.log('none');
         }
-        var targetDate = new Date("2017/11/24 00:00:00");
+        var targetDate = new Date("2017/11/23 00:00:00");
         var days;
         var hrs;
         var min;
