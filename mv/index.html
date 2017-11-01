@@ -147,8 +147,8 @@
         someday = new Date();
         sometime = new Date();
         someday.setFullYear(2017, 10, 31);
-        sometime.setFullYear(2017, 11, 24);
-        if (today > someday && today < sometime) {
+        sometime.setFullYear(2017, 11, 23);
+        if (today < sometime) {
             $(".black-friday").css("display", "block");
             console.log('block');
         } else {
